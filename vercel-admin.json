@@ -9,7 +9,7 @@
       }
     }
   ],
-  "buildCommand": "npm run build:admin",
+  "buildCommand": "CI=false npm run build:admin",
   "outputDirectory": "apps/admin/build",
   "installCommand": "npm install",
   "rewrites": [

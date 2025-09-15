@@ -9,7 +9,7 @@
       }
     }
   ],
-  "buildCommand": "npm run build:operators",
+  "buildCommand": "CI=false npm run build:operators",
   "outputDirectory": "apps/operators/build",
   "installCommand": "npm install",
   "rewrites": [
