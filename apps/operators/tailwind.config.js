@@ -1,0 +1,52 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        heading: ["CustomFont", "Plus Jakarta Sans", "sans-serif"],
+        clash: ["ClashGrotesk", "sans-serif"],
+        instrument: ["InstrumentSans", "sans-serif"],
+      },
+      colors: {
+        brandPurple: "#3F3465",
+        brandGreen: "#006600",
+        brandBlue: "#00246B",
+        whiteColor: "#FFFFFF",
+        blackColor: "#000000",
+        menuBlack: "#344054",
+        textGrey: "#667085",
+        textSecondary: "#6D6D6D",
+        greyBackground: "#D9DCE0",
+        lightGreenBackground: "F8FDF6",
+        bordersOrDivider: "#E0E0E0",
+        greyButton: "#E0E0E0",
+        tableHeader: "#EFFAF5",
+        tableRow: "#F7FDFA",
+        brandGray: "#F8F9FA",
+        brandRed: "#DC3545",
+      },
+      fontSize: {
+        "10px": "10px",
+        "15px": "15px",
+        "16px": "16px",
+        "14px": "14px",
+        "18px": "18px",
+        logo: "40px",
+        "12px": "12px",
+        "13px": "13px",
+        "20px": "20px",
+        "28px": "28px",
+        "25px": "25px",
+        "24px": "24px",
+        "30px": "30px",
+      },
+    },
+  },
+  daisyui: {
+    base: false,
+    themes: ["light"],
+  },
+  plugins: [require("daisyui"), require("tailwind-scrollbar-hide")],
+};

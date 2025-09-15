@@ -1,0 +1,21 @@
+{
+  "name": "rigshare-mono",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npm run start:operators",
+    "start:operators": "npm run start --workspace=@rigshare/operators",
+    "start:admin": "npm run start --workspace=@rigshare/admin",
+    "build": "npm run build:operators",
+    "build:operators": "npm run build --workspace=@rigshare/operators", 
+    "build:admin": "npm run build --workspace=@rigshare/admin",
+    "build:all": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "test:operators": "npm run test --workspace=@rigshare/operators",
+    "install:all": "npm install --workspaces"
+  }
+}

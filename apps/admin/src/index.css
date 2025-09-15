@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+  body {
+    @apply font-sans;
+  }
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.custom-checkbox:checked {
+  background-color: #358619; /* Tailwind's brandGreen color */
+  border-color: #358619; /* Tailwind's brandGreen color */
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1d5db; /* Tailwind's gray-300 color */
+  border-radius: 0.25rem; /* Tailwind's rounded class */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* ClashGrotesk Fonts */
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("./assets/fonts/ClashGrotesk/ClashGrotesk-Bold.ttf")
+    format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("./assets/fonts/ClashGrotesk/ClashGrotesk-Extralight.ttf")
+    format("truetype");
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("./assets/fonts/ClashGrotesk/ClashGrotesk-Light.ttf")
+    format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("./assets/fonts/ClashGrotesk/ClashGrotesk-Medium.ttf")
+    format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("./assets/fonts/ClashGrotesk/ClashGrotesk-Regular.ttf")
+    format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("./assets/fonts/ClashGrotesk/ClashGrotesk-Semibold.ttf")
+    format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("./assets/fonts/ClashGrotesk/ClashGrotesk-Variable.ttf")
+    format("truetype");
+  font-weight: 100 900; /* Variable font range */
+  font-style: normal;
+}
+
+/* Instrument Sans Font */
+@font-face {
+  font-family: "InstrumentSans";
+  src: url("./assets/fonts/InstrumentSans/InstrumentSans-Medium.ttf")
+    format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InstrumentSans";
+  src: url("./assets/fonts/InstrumentSans/InstrumentSans-Regular.ttf")
+    format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+/* Add to global CSS */
+.modal {
+  position: fixed;
+  inset: 0;
+}
+
+.Toastify__toast-container {
+  position: fixed !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  z-index: 9999999 !important;
+  pointer-events: auto !important;
+}
+
+[role="presentation"].modal-backdrop {
+  z-index: 999 !important;
+}
+
+/* hide-scrollbar.css */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

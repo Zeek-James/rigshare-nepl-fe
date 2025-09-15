@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F5F6F8" opacity="0.3"/>
+  
+  <!-- Empty bidding board -->
+  <rect x="50" y="50" width="300" height="200" rx="10" fill="#ffffff" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Decorative lines representing empty bid entries -->
+  <line x1="80" y1="90" x2="320" y2="90" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="80" y1="130" x2="320" y2="130" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="80" y1="170" x2="320" y2="170" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="80" y1="210" x2="320" y2="210" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Gavel icon -->
+  <path d="M240,120 l30,-30 l20,20 l-30,30 z" fill="#368618"/>
+  <rect x="220" y="140" width="10" height="40" transform="rotate(-45 225 160)" fill="#368618"/>
+  <circle cx="200" cy="180" r="15" fill="#368618" opacity="0.3"/>
+</svg>
