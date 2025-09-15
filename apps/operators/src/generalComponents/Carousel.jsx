@@ -19,6 +19,7 @@ export const Carousel = () => {
   useEffect(() => {
     startAutoSlide();
     return stopAutoSlide; // cleanup on unmount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const startAutoSlide = () => {

@@ -43,26 +43,26 @@ const SignUp = () => {
     e.preventDefault();
     return (window.location.href = `/email-otp?email=${email}&mode=sign-up`);
 
-    if (!validateInputs()) return;
+    // if (!validateInputs()) return;
 
-    const details = {
-      email: email,
-      password: password,
-    };
+    // const details = {
+    //   email: email,
+    //   password: password,
+    // };
 
-    try {
-      await login(details);
-    } catch (err) {
-      setErrors({
-        ...errors,
-        password: "SignUp failed. Please check your credentials.",
-      });
-    }
+    // try {
+    //   await login(details);
+    // } catch (err) {
+    //   setErrors({
+    //     ...errors,
+    //     password: "SignUp failed. Please check your credentials.",
+    //   });
+    // }
 
-    if (isSuccess) {
-      setEmail("");
-      setPassword("");
-    }
+    // if (isSuccess) {
+    //   setEmail("");
+    //   setPassword("");
+    // }
   };
 
   return (
