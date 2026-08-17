@@ -1,6 +1,7 @@
 const config = {
   dev: {
-    BASE_URL: "https://performance-dialogue-d5552af161a7.herokuapp.com/api/v1",
+    // BASE_URL: "https://performance-dialogue-d5552af161a7.herokuapp.com/api/v1",
+    BASE_URL: "https://perf-dial-dev.rightclick-academy.com/api/v1",
   },
   staging: {
     BASE_URL: "https://perf-dial-staging.rightclick-academy.com/api/v1",
