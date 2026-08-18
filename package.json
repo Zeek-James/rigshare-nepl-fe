@@ -8,14 +8,14 @@
   ],
   "scripts": {
     "start": "npm run start:operators",
-    "start:operators": "npm run start --workspace=@rigshare/operators",
-    "start:admin": "npm run start --workspace=@rigshare/admin",
+    "start:operators": "REACT_APP_ROLE=operators npm run start --workspace=@rigshare/main",
+    "start:admin": "REACT_APP_ROLE=admin npm run start --workspace=@rigshare/main",
     "build": "npm run build:operators",
-    "build:operators": "npm run build --workspace=@rigshare/operators", 
-    "build:admin": "npm run build --workspace=@rigshare/admin",
-    "build:all": "npm run build --workspaces",
+    "build:operators": "REACT_APP_ROLE=operators npm run build --workspace=@rigshare/main",
+    "build:admin": "REACT_APP_ROLE=admin npm run build --workspace=@rigshare/main",
+    "build:all": "npm run build:admin && npm run build:operators",
     "test": "npm run test --workspaces",
-    "test:operators": "npm run test --workspace=@rigshare/operators",
+    "test:main": "npm run test --workspace=@rigshare/main",
     "install:all": "npm install --workspaces"
   }
 }
