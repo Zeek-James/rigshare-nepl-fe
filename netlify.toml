@@ -1,10 +1,10 @@
 # Netlify configuration for RigShare Monorepo
 
-# Operators App (Main/Default)
+# Operators App (Main/Default) - built from apps/main with REACT_APP_ROLE=operators
 [build]
   command = "npm run build:operators"
-  publish = "apps/operators/build"
-  
+  publish = "apps/main/build"
+
 # Environment variables (set in Netlify dashboard)
 [build.environment]
   NODE_VERSION = "18"
@@ -16,10 +16,10 @@
   to = "/index.html"
   status = 200
 
-# Admin App Branch Deploy (optional)
+# Admin App Branch Deploy (optional) - built from apps/main with REACT_APP_ROLE=admin
 [context.admin]
   command = "npm run build:admin"
-  publish = "apps/admin/build"
+  publish = "apps/main/build"
 
 # Headers for security and performance
 [[headers]]

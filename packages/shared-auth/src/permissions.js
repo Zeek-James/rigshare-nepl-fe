@@ -31,11 +31,12 @@ export const hasPermissions = (requiredPermissions) => {
 
   const userPermissions = getStoredPermissions();
 
-  // If permissions haven't loaded yet, temporarily grant access
-  // This prevents blocking initial navigation
+  // If permissions haven't loaded yet - or the fetch failed - deny access to
+  // permission-gated routes/actions instead of granting it. Failing open here
+  // previously meant a failed or slow permissions fetch left the app
+  // permanently unrestricted for the session.
   if (userPermissions.length === 0) {
-    // console.warn("Permissions not loaded yet - temporarily granting access");
-    return true;
+    return false;
   }
 
   return requiredPermissions.some((permission) =>

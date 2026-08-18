@@ -22,7 +22,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # Copy built app
-COPY --from=builder /app/apps/operators/build .
+COPY --from=builder /app/apps/main/build .
 
 # Copy nginx configuration for SPA routing
 COPY <<EOF /etc/nginx/conf.d/default.conf

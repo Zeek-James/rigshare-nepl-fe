@@ -5,12 +5,12 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "apps/operators/build"
+        "distDir": "apps/main/build"
       }
     }
   ],
   "buildCommand": "CI=false npm run build:operators",
-  "outputDirectory": "apps/operators/build",
+  "outputDirectory": "apps/main/build",
   "installCommand": "npm install",
   "rewrites": [
     {
